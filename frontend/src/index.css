@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #f8f8f8 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.auth-wrapper.auth-cover {
+  align-items: flex-start;
+}
+
+.auth-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh)* 100);
+  width: 100%;
+}
+
+.auth-wrapper.auth-cover .auth-inner {
+  height: 100vh;
+  overflow-y: auto;
+  height: calc(var(--vh, 1vh)* 100);
+}
+
+.auth-wrapper .auth-inner {
+  width: 100%;
+}
+
+.auth-wrapper .auth-bg {
+  background-color: #fff;
+}
+
+.auth-img {
+  height: 90px;
+  width: auto;
+}
+
+.form-control:focus,
+.form-control:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid #0e2106;
+}
+
+.sidebar {
+  width: 240px;
+  z-index: 1001;
+  background: #053173;
+  bottom: 0;
+  margin-top: 0;
+  position: fixed;
+  top: 70px;
+  box-shadow: 0 -3px 31px 0 rgba(0, 0, 0, .05), 0 6px 20px 0 rgba(0, 0, 0, .02);
+}
+
+#sidebar-menu ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  position: relative;
+  font-size: 15px;
+  transition: all .4s;
+}
+
+#page-topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1002;
+  background-color: #fff;
+  box-shadow: 0 -3px 31px 0 rgba(0, 0, 0, .05), 0 6px 20px 0 rgba(0, 0, 0, .02);
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 70px;
+  padding: 0 12px 0 0;
+}
+
+.navbar-brand-box {
+  padding: 0 1.5rem;
+  text-align: center;
+  width: 240px;
+  background: #053173;
+}
+
+.logo {
+  line-height: 70px;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar .nav-link {
+  font-size: 16px;
+  color: #333;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+#sidebar-menu {
+  padding: 10px 0 30px 0;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #0b5ed7;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar .active {
+  background-color: #0b5ed7;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar .me-2 {
+  margin-right: 10px;
+}
+
+.main-content {
+  margin-left: 250px;
+  margin-top: 100px;
+  transition: margin-left 0.3s;
+  padding: 10px 25px;
+}
+
+.user-img {
+  cursor: 'pointer';
+  border-radius: 50%;
+  height: 50px;
+  width: auto;
+}
+
+.dropdown-menu .dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  z-index: 1000;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.2rem!important;
+  clear: both;
+  font-weight: 400;
+  color: #6e6b7b;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-item:active,
+.dropdown-item:hover {
+  color: #fff!important;
+  text-decoration: none!important;
+  background-color: #053173!important;
+}
+
+.dropdown-menu {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-name: slideIn;
+}
+
+.card {
+  border: none;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 20px rgba(18, 38, 63, .0313726);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(34, 41, 47, 0.125);
+  border-radius: 0.428rem;
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    width: 100% !important;
+    margin-top: 6px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 0;
+    overflow: hidden;
+  }
+
+  .sidebar.open {
+    width: 250px;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-brand-box {
+    width: 80px !important;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .p-lg-5 {
+    padding: 4rem !important;
+  }
+}
